@@ -115,6 +115,7 @@
 	  </div>
 	</aside>
 	
+	<!-- Footer Div -->
 	<footer>
 		<div class="container">
 	  <div class="copyright">
