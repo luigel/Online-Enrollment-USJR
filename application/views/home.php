@@ -1,5 +1,5 @@
 <?php
-  set_include_path(dirname(__FILE__) . "/../../assets/includes");
+  set_include_path(dirname(__FILE__) . "/includes");
   include "head.php";
   include "header.php";
   include "aside-nav.php";
