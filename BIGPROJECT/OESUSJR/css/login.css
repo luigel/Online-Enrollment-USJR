@@ -1,0 +1,19 @@
+/* PRESETS */
+#submit {cursor: pointer;}
+
+.usjrlogo {background: #085C2E;border-radius: 30px 30px 3px 3px;}
+.usjrlogo h3 {font: bold 20px/20px Trebuchet MS; color: #fff;position: relative;top: -15px;}
+.logo-wrapper {background: rgba(0,0,0,0.099);height: 100px;border-radius: 30px 30px 3px 3px;margin: 0 10px 0 10px;}
+/* Login CSS*/
+.login-register-content nav {height:52px; background: lightgreen;}
+.login-register-content {width: 500px;margin: auto;display: block;margin: 0 auto;position: relative;}
+.login-register-content nav ul {list-style-type: none;padding: 0;margin: 0 auto;display: flex;}
+.login-register-content nav ul li { display: inline-block;padding: 0px;margin: 0px;}
+.login-register-content nav li a {padding: 16px 25px;color: white;margin: 0 auto;display: block; background: lightgreen;}
+.login-register-content nav li a:hover {background: antiquewhite; transition: 0.5s ease-in-out; -moz-transition: 0.5s ease-in-out; -webkit-transition: 0.5s ease-in-out;}
+input {border-radius: 10px;padding: 10px;display: block;margin: auto;box-shadow: 5px 5px 5px grey;margin-bottom: 0px;margin-bottom: 15px;}
+.login-form, .register-form {text-align: center;background: antiquewhite;}
+.login-form, .register-form {transition: all 0.5s;transform: scale(1);-moz-transform: scale(1);-webkit-transform: scale(1);position: absolute;left: 0;width: 100%;}
+.zoomout {transform: scale(0);}
+
+footer {position: fixed; bottom: 0;}
