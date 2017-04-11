@@ -3,6 +3,7 @@ body {padding: 0;margin: 0;}
 .container { width: 1000px;max-width: 100%;padding: 0;margin: 0 auto;}
 .inline-block {display: inline-block;}
 a {text-decoration: none;}
+span {display: block;}
 /* NEW RULESET */
 /*
 ||  Changing the outer .container into a flex container
@@ -20,6 +21,7 @@ header {background: rgba(0,0,0,0.099);width: 100%;height: 100px;border-radius: 3
 .logo {float: left;}
 .accountinfo {float: right;padding: 10px 0 0 0;}
 .comp-title {font: bold 20px/20px Trebuchet MS; color: #fff;float: right;margin: 50px 0px 0px 5px;}
+
 /* PROFILE DROPDOWN CONFIG */
 .profile-dropdown {position: relative;display: inline-block;padding-left: 10px;}
 .dropdowncaret {margin-top: -50px;border-left: 7px solid transparent;border-right: 7px solid transparent;cursor: pointer;border-top: 7px solid #1fa52c;}
@@ -30,8 +32,9 @@ header {background: rgba(0,0,0,0.099);width: 100%;height: 100px;border-radius: 3
 .profile-dropdown-content li:hover {background-color: green;background: linear-gradient(#277f21, #165412);border-radius: 10px;box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);}
 .profile-dropdown-content li a:hover {color: white;}
 .profile-dropdown-display {display: block;}
-.profile-picture {padding: 2px;border: 2px solid black;background-color: white;}
 
+.profile-picture {padding: 2px;border: 2px solid black;background-color: white;}
+.profile-name {float: left; color: #fff; padding: 10px 10px 0 0;font: normal 15px/15px Trebuchet MS;}
 /* ASIDE NAV-MENU CONFIG */
 .menuheader {margin: 0;border-bottom: 2px solid black;}
 #nav-menu {position: relative;padding: 5px;border-radius: 20px 0px 20px 0px;width: 200px;background-color: rgba(255, 255, 255, 0.9);text-align: center;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
