@@ -129,7 +129,6 @@ class User extends CI_Controller {
 
 			if ($this->user_model->resolve_user_login($idnumber, $password)) {
 
-				//$user_id = $this->user_model->get_user_id_from_username($username);
 				$user = $this->user_model->get_user($idnumber);
 
 				// set session user datas
@@ -147,7 +146,6 @@ class User extends CI_Controller {
 
 			} else {
 
-				// login failed
 				$data->error = 'Wrong username or password.';
 
 				// send error to the view
@@ -173,6 +171,9 @@ class User extends CI_Controller {
 		// create the data object
 		$data = new stdClass();
 
+		// load form helper and validation library
+		$this->load->helper('html');
+
 		if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
 
 			// remove session datas
@@ -190,7 +191,7 @@ class User extends CI_Controller {
 
 			// there user was not logged in, we cannot logged him out,
 			// redirect him to site root
-			redirect('/');
+			redirect('/login');
 
 		}
 
