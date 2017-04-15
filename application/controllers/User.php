@@ -65,7 +65,7 @@ class User extends CI_Controller {
 			$verificationcode = md5($this->user_model->generate_verification_code());
 			if ($this->user_model->create_user($idnumber, $firstname, $middlename, $lastname, $password, $email, $verificationcode)) {
 
-				if($this->email_model->send_email_verification($email, $verificationcode)) {
+				if($this->email_model->send_email_verification($email, $verificationcode, $firstname)) {
 
 					// user creation ok
 					$this->load->view('includes/head');
@@ -217,6 +217,24 @@ class User extends CI_Controller {
 					 $this->load->view('includes/footer');
 			 }
 	 }
+
+	 /**
+ 	 * register function.
+ 	 *
+ 	 * @access public
+ 	 * @return void
+ 	 */
+ 	public function email() {
+
+		// create the data object
+		$data = new stdClass();
+
+		$data->userName = $this->input->post('firstname');
+		$data->verificationText = md5($this->user_model->generate_verification_code());
+
+		$this->load->helper('html');
+		$this->load->view('user/email/email_template', $data);
+	}
 
 
 }

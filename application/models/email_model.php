@@ -14,7 +14,7 @@ class email_model extends CI_Model {
   * @param mixed $verificationText
   * @return bool true on success, false on failure
   */
- public function send_email_verification($email,$verificationText){
+ public function send_email_verification($email,$verificationText, $firstname){
 
   $config = Array(
      'protocol' => 'smtp',
@@ -31,10 +31,16 @@ class email_model extends CI_Model {
   $this->load->library('email', $config);
   $this->email->initialize($config);
   $this->email->set_newline("\r\n");
-  $this->email->from('noreply.usjr.online.enrollment@gmail.com', "USJ-R Online Enrollment Admin Team");
+  $this->email->from('noreply.usjr.online.enrollment@gmail.com', "USJ-R Online Enrollment");
   $this->email->to($email);
   $this->email->subject("Email Verification");
-  $this->email->message("Dear User,\nPlease click on below URL or paste into your browser to verify your Email Address\n\n http://localhost/Online-Enrollment-USJR/User/confirm_email/".$verificationText."\n"."\n\nThanks\nAdmin Team");
+
+  $data = array(
+             'userName'         => $firstname,
+             'verificationText' => $verificationText,
+                 );
+  $body = $this->load->view('user/email/email_template', $data, TRUE);
+  $this->email->message($body);
 
   return $this->email->send();
  }
